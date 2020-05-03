@@ -1,0 +1,78 @@
+[debug] [2020-05-03T16:40:11.850Z] ----------------------------------------------------------------------
+[debug] [2020-05-03T16:40:11.852Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\M4800\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-05-03T16:40:11.852Z] CLI Version:   8.2.0
+[debug] [2020-05-03T16:40:11.852Z] Platform:      win32
+[debug] [2020-05-03T16:40:11.853Z] Node Version:  v12.16.1
+[debug] [2020-05-03T16:40:11.888Z] Time:          Sun May 03 2020 23:40:11 GMT+0700 (Indochina Time)
+[debug] [2020-05-03T16:40:11.888Z] ----------------------------------------------------------------------
+[debug] [2020-05-03T16:40:11.888Z] 
+[debug] [2020-05-03T16:40:11.941Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-03T16:40:11.942Z] > authorizing via signed-in user
+[debug] [2020-05-03T16:40:11.942Z] [iam] checking project winassstore-com-vn for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-05-03T16:40:11.944Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-05-03T16:40:11.944Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-05-03T16:40:12.539Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 03 May 2020 16:40:11 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-03T16:40:12.570Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/winassstore-com-vn:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-05-03T16:40:14.196Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 03 May 2020 16:40:12 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=952","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-03T16:40:14.198Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/winassstore-com-vn  
+ 
+[debug] [2020-05-03T16:40:15.482Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 03 May 2020 16:40:13 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'winassstore-com-vn'...
+[info] 
+[info] i  deploying hosting
+[debug] [2020-05-03T16:40:15.487Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/winassstore-com-vn/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-05-03T16:40:18.063Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 03 May 2020 16:40:16 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[winassstore-com-vn]: beginning deploy...
+[info] i  hosting[winassstore-com-vn]: found 111 files in dist/webass
+[debug] [2020-05-03T16:40:18.364Z] [hosting] hash cache [ZGlzdFx3ZWJhc3M] stored for 111 files
+[debug] [2020-05-03T16:40:18.365Z] [hosting][hash queue][FINAL] {"max":231,"min":1,"avg":7.345341875782672,"active":0,"complete":111,"success":111,"errored":0,"retried":0,"total":111,"elapsed":270}
+[debug] [2020-05-03T16:40:18.365Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/winassstore-com-vn/versions/29846018f361fad3:populateFiles  
+ <request body omitted>
+[debug] [2020-05-03T16:40:20.651Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 03 May 2020 16:40:19 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-03T16:40:20.654Z] [hosting][populate queue][FINAL] {"max":2289,"min":2289,"avg":2289,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":2291}
+[debug] [2020-05-03T16:40:20.654Z] [hosting] uploads queued: 6
+[debug] [2020-05-03T16:40:29.563Z] [hosting][upload queue][FINAL] {"max":8912,"min":2630,"avg":5205.666666666667,"active":0,"complete":6,"success":6,"errored":0,"retried":0,"total":6,"elapsed":8912}
+[info] +  hosting[winassstore-com-vn]: file upload complete
+[debug] [2020-05-03T16:40:29.565Z] [hosting] deploy completed after 11500ms
+[debug] [2020-05-03T16:40:29.855Z] [
+  {
+    "config": {
+      "public": "dist/webass",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "winassstore-com-vn"
+    },
+    "site": "winassstore-com-vn",
+    "version": "sites/winassstore-com-vn/versions/29846018f361fad3"
+  }
+]
+[info] i  hosting[winassstore-com-vn]: finalizing version...
+[debug] [2020-05-03T16:40:29.856Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/winassstore-com-vn/versions/29846018f361fad3?updateMask=status  
+ {"status":"FINALIZED"}
+[debug] [2020-05-03T16:40:31.772Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 03 May 2020 16:40:30 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-03T16:40:31.772Z] [hosting] finalized version for winassstore-com-vn: {"name":"sites/winassstore-com-vn/versions/29846018f361fad3","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2020-05-03T16:40:15.968303Z","createUser":{"email":"thanghmph07337@fpt.edu.vn"},"finalizeTime":"2020-05-03T16:40:30.437433Z","finalizeUser":{"email":"thanghmph07337@fpt.edu.vn"}}
+[info] +  hosting[winassstore-com-vn]: version finalized
+[info] i  hosting[winassstore-com-vn]: releasing new version...
+[debug] [2020-05-03T16:40:31.774Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/winassstore-com-vn/releases?version_name=sites/winassstore-com-vn/versions/29846018f361fad3  
+ {"message":null}
+[debug] [2020-05-03T16:40:33.728Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 03 May 2020 16:40:32 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-03T16:40:33.729Z] [hosting] release: {"name":"sites/winassstore-com-vn/releases/1588524032399896","version":{"name":"sites/winassstore-com-vn/versions/29846018f361fad3","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}},"type":"DEPLOY","releaseTime":"2020-05-03T16:40:32Z"}
+[info] +  hosting[winassstore-com-vn]: release complete
+[info] 
+[info] +  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/winassstore-com-vn/overview
+[info] Hosting URL: https://winassstore-com-vn.web.app

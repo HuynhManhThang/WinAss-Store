@@ -1,0 +1,61 @@
+<div class="services-breadcrumb">
+  <div class="agile_inner_breadcrumb">
+    <div class="container">
+      <ul class="w3_short">
+        <li>
+          <a routerLink="/index/home"><i class="fas fa-home">Home</i></a>
+          <i class="fas fa-chevron-right"></i>
+        </li>
+        <li>Login</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container pt-5">
+  <h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
+    <span>Log in</span></h3>
+  <div class="product-sec1 px-sm-4 px-3 py-sm-5  py-3 mb-4">
+    <form [formGroup]="userFromGroup" (ngSubmit)="onSubmit()" class="creditly-card-form agileinfo_form">
+      <div class="creditly-wrapper wthree, w3_agileits_wrapper">
+        <div class="information-wrapper">
+          <div class="first-row">
+            <div class="controls form-group">
+              <label for="email">Email</label>
+              <input type="text" class="billing-address-name form-control" formControlName="email" name="email"
+                placeholder="Enter Email" [ngClass]="{ 'is-invalid': submitted && u.email.errors }" />
+              <div *ngIf="submitted && u.email.errors" class="alert alert-warning">
+                <div *ngIf="u.email.errors.required">Email is required</div>
+                <div *ngIf="u.email.errors.email">Email must be a valid email address</div>
+              </div>
+            </div>
+
+            <div class="controls form-group">
+              <label for="Password">Password</label>
+              <input type="password" class="form-control" formControlName="password" placeholder="Enter Password"
+                name="password" [ngClass]="{ 'is-invalid': submitted && u.password.errors }" />
+                <div *ngIf="submitted && u.password.errors" class="alert alert-warning">
+                    <div *ngIf="u.password.errors.required">Password is required</div>
+                    <div *ngIf="u.password.errors.minlength">Password must be at least 6 characters</div>
+                    <div *ngIf="u.password.errors.maxlength">Password must no more than 255 characters</div>
+                </div>
+            </div>
+
+
+            </div>
+            <div class="sub-w3l">
+              <div class="custom-control custom-checkbox mr-sm-2">
+                <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                <label class="custom-control-label" for="customControlAutosizing">Remember me?</label>
+              </div>
+            </div>
+            <button class="submit check_out btn"  type="submit" >
+              <i class="fas fa-sign-in-alt mr-2"></i>Login</button>
+          </div>
+          <p class="text-center dont-do mt-3">Don't have an account?
+            <a [routerLink]="['/index/register']" routerLinkActive="router-link-active" >
+              Register Now</a>
+          </p>
+        </div>
+      </form>
+    </div>
+</div>

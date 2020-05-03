@@ -1,0 +1,54 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title text-center">Add to cart</h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"  routerLink="/index/home">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" *ngIf="product">
+          <div class="form-group">
+            <label class="col-form-label">Are you sure you want to add to cart?<br>
+              Please enter the product confirmation box below again!
+            </label>
+            <ul class="pricing-content pl-5">
+              <li>Type :{{product.type}}</li>
+              <li>Product : name:{{product.name}}</li>
+              <li>Price :{{product.price}}</li>
+              <li>Discout :{{product.discout}}</li>
+            </ul>
+          </div>
+
+          <div class="col-md-12 col-lg-12">
+            <div class="form-group">
+              <label>Product Type</label>
+              <select class="form-control" id="type" [(ngModel)]="cart.type" required >
+                <option value="New Mobile">New Mobile</option>
+                <option value="Live New 99%">Live New 99%</option>
+
+
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Product Name</label>
+              <input type="text" class="form-control" id="name" [(ngModel)]="cart.name" value="{{product.name}}">
+            </div>
+            <div class="form-group">
+              <label>Price</label>
+              <input type="number" class="form-control" id="price" [(ngModel)]="cart.price" value="{{product.price}}">
+            </div>
+            <div class="form-group">
+              <label>Discout</label>
+              <input type="number" class="form-control" id="discout" [(ngModel)]="cart.discout" value="{{product.discout}}">
+            </div>
+          </div>
+
+          <div class="btn-group sub-w3l">
+            <button class="btn btn-outline-danger" (click)="addtocart()" data-dismiss="modal">Yes</button>
+            <button class="btn btn-outline-info" data-dismiss="modal" aria-label="Close" routerLink="/index/home">No</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
